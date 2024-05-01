@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  
+    div {
+      margin-bottom: 10px;
+    }
+  
+    label {
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    input[type="datetime-local"],
+    select {
+      width: 100%;
+    }
+  }
+  
+  ::ng-deep .mat-datepicker-content .mat-calendar {
+    background-color: #efefef;
+  }

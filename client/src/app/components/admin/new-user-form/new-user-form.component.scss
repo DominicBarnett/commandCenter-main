@@ -1,0 +1,14 @@
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%; // Ensure full width for form fields
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,16 @@
+<div>
+  <h2>Game List</h2>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let game of games">
+      <mat-icon matListIcon>gamepad</mat-icon>
+      <div matLine>{{ game.gameMode }} - {{ game.startTime | date:'short' }}</div>
+      <button mat-icon-button (click)="editGame(game._id)" aria-label="Edit game">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteGame(game._id)" aria-label="Delete game">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-nav-list>
+  <button mat-raised-button color="primary" (click)="newGame()">Create New Game</button>
+</div>

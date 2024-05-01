@@ -1,0 +1,32 @@
+{
+  "name": "commandCenter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch",
+    "start.dev": "npm start"
+  },
+  "watch": {
+    "start.dev": {
+      "patterns": [
+        "*"
+      ],
+      "ignore":[
+        "node_modules"
+      ],
+      "extensions": "js"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^8.3.2",
+    "npm-watch": "^0.12.0"
+  }
+}

@@ -1,0 +1,24 @@
+<div>
+    <h2>Create New User</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label>
+        Name:
+        <input type="text" formControlName="name">
+      </label>
+      <div *ngIf="userForm.get('name').errors && userForm.get('name').touched">
+        <small *ngIf="userForm.get('name').errors.required">Name is required.</small>
+        <small *ngIf="userForm.get('name').errors.minlength">Name must be at least 3 characters long.</small>
+      </div>
+  
+      <label>
+        Role:
+        <input type="text" formControlName="role">
+      </label>
+      <div *ngIf="userForm.get('role').errors && userForm.get('role').touched">
+        <small *ngIf="userForm.get('role').errors.required">Role is required.</small>
+      </div>
+  
+      <button type="submit" [disabled]="!userForm.valid">Create User</button>
+    </form>
+  </div>
+  

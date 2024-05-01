@@ -1,0 +1,17 @@
+<div *ngIf="game">
+    <h2>Delete Game: {{ game.gameMode }}</h2>
+    <p><strong>Game Mode:</strong> {{ game.gameMode }}</p>
+    <p><strong>Duration:</strong> {{ game.duration }}</p>
+    <p><strong>Start Time:</strong> {{ game.startTime | date:'short' }}</p>
+    <form [formGroup]="confirmDeleteForm" (ngSubmit)="onDelete()">
+      <label>
+        <input type="checkbox" formControlName="confirm">
+        I confirm the deletion of this game.
+      </label>
+      <button type="submit" [disabled]="!confirmDeleteForm.value.confirm">Delete Game</button>
+    </form>
+  </div>
+  <div *ngIf="!game">
+    <p>Game not found or has already been deleted.</p>
+  </div>
+  
